@@ -1,0 +1,17 @@
+import pandas as pd
+data = pd.read_csv('data.csv')
+print(data.head())
+print(data.tail())
+print(type(data))
+data.dropna(inplace=True)
+data2 =data.dropna()
+data.fillna(40,inplace =True)
+print(data2.info())
+print(data["Duration"])
+
+print(data.info())
+data["Calories"].fillna(70,inplace=True)
+print(data.info())
+print(data.duplicated())
+data.drop_duplicates(inplace =True)
+print(data.info())
